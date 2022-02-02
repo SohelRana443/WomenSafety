@@ -1,0 +1,70 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneActivity" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.WomenSafety.AppBarOverlay"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/saveSourcePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#E91E63"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNotxt" />
+
+    <EditText
+        android:id="@+id/phoneNotxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveSourcePhone"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Your Phone Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/appBarLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/backBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="@+id/saveSourcePhone"
+        app:layout_constraintStart_toStartOf="@+id/saveSourcePhone"
+        app:layout_constraintTop_toBottomOf="@+id/saveSourcePhone" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="190dp"
+        android:layout_height="199dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNotxt"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNotxt"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/phoneNotxt"
+        app:srcCompat="@drawable/ic_undraw_mobile_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

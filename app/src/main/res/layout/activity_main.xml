@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.WomenSafety.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/viewRegistered"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/instructionBtn"
+        android:layout_alignStart="@+id/instructionBtn"
+        android:layout_alignLeft="@+id/instructionBtn"
+        android:layout_alignEnd="@+id/instructionBtn"
+        android:backgroundTint="#E91E63"
+        android:text="Enable Safety"
+        app:layout_constraintBottom_toTopOf="@+id/registerPhone"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.764" />
+
+    <Button
+        android:id="@+id/instructionBtn"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="sans-serif"
+        android:text="Instructions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/registerPhone"
+        app:layout_constraintTop_toBottomOf="@+id/registerPhone"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="36dp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/Theme.WomenSafety.PopupOverlay"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/registerPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewRegistered"
+        android:layout_alignStart="@+id/viewRegistered"
+        android:layout_alignEnd="@+id/viewRegistered"
+        android:width="290dp"
+        android:text="Register your Phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/viewRegistered"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="292dp"
+        android:layout_height="249dp"
+        android:layout_above="@+id/registerPhone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:maxWidth="290dp"
+        app:layout_constraintBottom_toTopOf="@+id/registerPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/ic_undraw_fireworks_women" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

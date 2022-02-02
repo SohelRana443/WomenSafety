@@ -1,0 +1,79 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.WomenSafety.AppBarOverlay"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="20dp"
+        android:onClick="storeInDB"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/editText1"
+        app:layout_constraintStart_toStartOf="@+id/editText1"
+        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:ems="10"
+        android:hint="Person Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:text="Add a person whoever you want to notify"
+        app:layout_constraintBottom_toTopOf="@+id/editText1"
+        app:layout_constraintStart_toStartOf="@+id/editText1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="283dp"
+        android:layout_height="326dp"
+        android:src="@drawable/ic_undraw_people"
+        app:layout_constraintBottom_toTopOf="@+id/editText1"
+        app:layout_constraintEnd_toEndOf="@+id/editText1"
+        app:layout_constraintStart_toStartOf="@+id/editText1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
